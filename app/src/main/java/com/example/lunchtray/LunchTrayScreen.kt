@@ -52,9 +52,7 @@ enum class LunchTrayScreen(@StringRes val title: Int) {
     Checkout(title = R.string.order_checkout)
 }
 
-/**
- * Composable that displays the topBar and displays back button if back navigation is possible.
- */
+
 @Composable
 fun LunchTrayAppBar(
     @StringRes currentScreenTitle: Int,
@@ -80,15 +78,13 @@ fun LunchTrayAppBar(
 
 @Composable
 fun LunchTrayApp(modifier: Modifier = Modifier) {
-    //Create NavController
+
     val navController = rememberNavController()
-    // Get current back stack entry
     val backStackEntry by navController.currentBackStackEntryAsState()
-    // Get the name of the current screen
     val currentScreen = LunchTrayScreen.valueOf(
         backStackEntry?.destination?.route ?: LunchTrayScreen.Start.name
     )
-    // Create ViewModel
+
     val viewModel: OrderViewModel = viewModel()
 
     Scaffold(
