@@ -26,6 +26,5 @@ sealed class MenuItem(
         override val price: Double
     ) : MenuItem(name, description, price)
 
-
     fun getFormattedPrice(): String = NumberFormat.getCurrencyInstance().format(price)
 }
