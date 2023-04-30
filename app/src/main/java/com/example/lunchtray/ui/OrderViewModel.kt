@@ -15,7 +15,6 @@ import java.text.NumberFormat
 class OrderViewModel : ViewModel() {
 
     private val taxRate = 0.08
-
     private val _uiState = MutableStateFlow(OrderUiState())
     val uiState: StateFlow<OrderUiState> = _uiState.asStateFlow()
 

@@ -37,7 +37,6 @@ enum class LunchTrayScreen(@StringRes val title: Int) {
     Checkout(title = R.string.order_checkout)
 }
 
-
 @Composable
 fun LunchTrayAppBar(
     @StringRes currentScreenTitle: Int,
